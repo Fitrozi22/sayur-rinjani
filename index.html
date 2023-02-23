@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayur Rinjani</title>
+
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Raleway:wght@100&family=Viga&display=swap" rel="stylesheet">
+
+<!--Feather Iconts-->
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!--Style-->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <img href="#" src="img/Logo.png" class="navbar-logo"></img>
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Our Profile</a>
+            <a href="#menu">Menu</a>
+            <a href="#messageUs">Message Us</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+<!--Navbar End-->
+
+<!--Hero Section-->
+    <section class="hero" id="home">
+        <div class="content">
+            <h1>Hai <span id="nama"></span> Selamat datang <br> di website Sayur Rinjani</h1>
+            <p>Ini adalah website penjualan sayur rinjani dengan kualitas sayur segar fresh diambil langsung dari ladang sayuran yang terletak di kaki gungung Rinjani.</p>
+            <div class="slider">
+                <img class="img-slideshow"
+                src="img/header1.jpg">
+                <img class="img-slideshow"
+                src="img/header2.jpg">
+                <img class="img-slideshow"
+                src="img/header3.jpg">
+                <img class="img-slideshow"
+                src="img/header4.jpg">
+
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
+        </div>
+        
+        <script>
+            var name = prompt("Masukkan nama kamu");
+            document.getElementById("nama").innerText = name;
+        </script>
+    </section>
+<!--Hero Section End-->
+
+<!--About section start-->
+<section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2>
+
+    <div class="row">
+        <div class="about-img">
+            <img src="img/Tentang-kami.jpg" alt="Tentang Kami">
+        </div>
+        <div class="content">
+            <h3>Kenapa memilih sayur rinjani?</h3>
+            <p>Sayur rinjani adalah sebuah merek dagang dari salah satu sayuran terbaik yang ada di Indonesia. Berdiri sejak tahun 2021, saat ini sayur rinjani tumbuh menjadi merek penjualan sayur yang dapat menyuplai sayuran hampir di seluruh daerah di Indonesia.</p><br>
+            <p>Mengusung konsep penjualan sayur moderen yang mudah di beli disegala kalangan, sayur rinjani ada untuk kebutuhan masak dan bertujuan meningkatkan gizi dari pembelinya </p>
+        </div>
+    </div>
+</section>
+<!--About Section end-->
+
+<!--Menu section start-->
+<section id="menu" class="menu">
+    <h2><span>Menu</span> Kami</h2>
+    <p>Saat ini kami memiliki beberapa menu yang dapat dibeli langsung lewat platform online diantaranya adalah : </p>
+
+    <div class="row">
+        <div class="menu-card">
+            <img src="img/menu/1.jpg" alt="pakkcoi" class="menu-card-img">
+            <h3 class="menu-card-title" >- Sayur Pakcoy</h3>
+            <p class="menu-card-price">IDR 15K</p>
+        </div>
+        <div class="menu-card">
+            <img src="img/menu/2.jpg" alt="Brokoli" class="menu-card-img">
+            <h3 class="menu-card-title" >- Brokoli</h3>
+            <p class="menu-card-price">IDR 12K</p>
+        </div>
+        <div class="menu-card">
+            <img src="img/menu/3.jpg" alt="Espresso" class="menu-card-img">
+            <h3 class="menu-card-title" >- Brokoli</h3>
+            <p class="menu-card-price">IDR 12K</p>
+        </div>
+        <div class="menu-card">
+            <img src="img/menu/4.jpg" alt="Wortel" class="menu-card-img">
+            <h3 class="menu-card-title" >- Wortel</h3>
+            <p class="menu-card-price">IDR 15K</p>
+        </div>
+        <div class="menu-card">
+            <img src="img/menu/5.jpg" alt="Sayur bayam" class="menu-card-img">
+            <h3 class="menu-card-title" >- Sayur Bayam</h3>
+            <p class="menu-card-price">IDR 20K</p>
+        </div>
+    </div>
+</section>
+<!--Menu section End-->
+
+<!--form section-->
+<div class="contact" id="messageUs">
+    <h2>Message Us</h2>
+    
+    <div class="row">
+    <form name="message-form" onsubmit="return validateForm()">
+        Nama : 
+        <input placeholder="Nama" type="text" name="full-name" class="input-group">
+        <br><br>
+
+        Tanggal Lahir :
+        <input type="date" name="birth-date" class="input-group">
+        <br><br>
+
+        Jenis Kelamin :
+        <input type="radio" id="male" name="gender" value="Laki-laki">
+        <label for="male">Laki-laki</label>
+        <input type="radio" id="female" name="gender" value="Perempuan">
+        <label for="female">Perempuan</label>
+        <br><br>
+
+        Pesan :
+        <br>
+        <textarea placeholder="Message" name="message" class="input-group"></textarea>
+        <br><br>
+
+        <input type="submit" value="submit" class="btn">
+    </form>
+    
+
+    <script>
+        function validateForm() {
+            var name = document.forms ["message-form"]["full-name"].value;
+            var date = document.forms ["message-form"]["birth-date"].value;
+            var gender = document.forms ["message-form"]["gender"].value;
+            var message = document.forms ["message-form"]["message"].value;
+
+            if (name == "" || date == "" || gender == "" || message == "") {
+                alert('Input tidak boleh kosong!')
+                return false;
+            }
+
+            document.getElementById("sender-full-name").innerText = name;
+            document.getElementById("sender-birth-date").innerText = date;
+            document.getElementById("sender-gender").innerText = gender;
+            document.getElementById("sender-message").innerText = message;
+            return false;
+            console.log({name, date, gender, message});
+        }
+    </script>
+
+    <div class="form-output">
+        <p>Nama : <span id="sender-full-name"></span></p> <br><br>
+        <p>Tanggal Lahir : <span id="sender-birth-date"></span></p> <br><br>
+        <p>Jenis Kelamin : <span id="sender-gender"></span></p><br><br>
+        <p>Pesan : <span id="sender-message"></span></p>
+    </div>
+
+    </div>
+</div>
+
+<!--Footer start-->
+<footer>
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+    
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+    </div>
+    
+    <div class="credit">
+        <p>Created by <a href="">Imam Fitrozi</a>. | &copy; 2023</p>
+    </div>
+    </footer>
+
+<!--Footer End-->
+
+<!--Feather Iconts-->
+<script>
+    feather.replace()
+</script>
+
+<!--Contact Section End-->
+
+<!--My JavaScript-->
+<script src="script.js"></script>
+
+</body>
+</html>
